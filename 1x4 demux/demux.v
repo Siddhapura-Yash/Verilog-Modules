@@ -7,9 +7,6 @@ output reg [0:3] a;  // 4-bit output; 'reg' is used to hold value until it chang
 
 // Always block triggered whenever any of the inputs change
 always @(*) begin
-    // Reset all outputs to 0
-    a = 4'b0000; // Ensure all outputs are initially 0
-
     // Select output based on selection input
     if (sel == 2'b00)   // Select output a[0]
         a[0] = y;
